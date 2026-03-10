@@ -1,11 +1,11 @@
 export async function GET(
   request: Request,
-  { params }: { params: Promise<{ movieId: string }> }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const { movieId } = await params;
+  const { id } = await params;
 
   return Response.json({
-    message: `GET request for movie ${movieId} received`
+    message: `GET request for movie ${id} received`
   });
 }
 
